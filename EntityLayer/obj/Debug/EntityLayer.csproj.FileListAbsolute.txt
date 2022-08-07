@@ -1,0 +1,12 @@
+C:\Yeni klasör\MyBlog\EntityLayer\bin\Debug\EntityLayer.dll.config
+C:\Yeni klasör\MyBlog\EntityLayer\bin\Debug\EntityLayer.dll
+C:\Yeni klasör\MyBlog\EntityLayer\bin\Debug\EntityLayer.pdb
+C:\Yeni klasör\MyBlog\EntityLayer\bin\Debug\EntityFramework.dll
+C:\Yeni klasör\MyBlog\EntityLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Yeni klasör\MyBlog\EntityLayer\bin\Debug\EntityFramework.xml
+C:\Yeni klasör\MyBlog\EntityLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Yeni klasör\MyBlog\EntityLayer\obj\Debug\EntityLayer.csproj.AssemblyReference.cache
+C:\Yeni klasör\MyBlog\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Yeni klasör\MyBlog\EntityLayer\obj\Debug\EntityLayer.csproj.CopyComplete
+C:\Yeni klasör\MyBlog\EntityLayer\obj\Debug\EntityLayer.dll
+C:\Yeni klasör\MyBlog\EntityLayer\obj\Debug\EntityLayer.pdb
