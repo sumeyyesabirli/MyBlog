@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,7 @@ namespace MyBlog.Controllers
 {
     public class CategoryController : Controller
     {
-        CategoryManager cm = new CategoryManager(); 
-        public ActionResult GetCategoryList()
-        {
-            var categoryvalues = cm.GetAllBl();
-            return View(categoryvalues);
-        }
+        CategoryManager cm = new CategoryManager(new EfCategoryDal());
+   
     }
 }
