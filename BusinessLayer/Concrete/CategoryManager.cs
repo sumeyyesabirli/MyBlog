@@ -20,6 +20,14 @@ namespace BusinessLayer.Concrete
             _categoryDal = categoryDal;
         }
 
+     
+
+        public void CaregotyAdd(Category category)
+        {
+            _categoryDal.Add(category);
+
+        }
+
         public List<Category> GetList()
         {
             return _categoryDal.List();
