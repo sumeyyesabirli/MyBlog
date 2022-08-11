@@ -30,6 +30,11 @@ namespace DataAccessLayer.Concrete.Repositories
 
         }
 
+        public Entity Get(Expression<Func<Entity, bool>> filter)
+        {
+            return _object.SingleOrDefault(filter);
+        }
+
         public List<Entity> List()
         {
             return _object.ToList();

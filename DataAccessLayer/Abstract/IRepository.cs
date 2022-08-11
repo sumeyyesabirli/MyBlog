@@ -11,6 +11,8 @@ namespace DataAccessLayer.Abstract
     {
         List<Entity> List();
         void Add(Entity entity);
+        
+        Entity Get (Expression<Func<Entity, bool>> filter);
         void Update(Entity entity);
         void Delete(Entity entity);
 

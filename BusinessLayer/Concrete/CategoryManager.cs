@@ -20,12 +20,20 @@ namespace BusinessLayer.Concrete
             _categoryDal = categoryDal;
         }
 
-     
+        public void CategoryDelete(Category category)
+        {
+            _categoryDal.Delete(category);
+        }
 
-        public void CaregotyAdd(Category category)
+        public void CaregoryAdd(Category category)
         {
             _categoryDal.Add(category);
 
+        }
+
+        public Category GetByID(int id)
+        {
+            return _categoryDal.Get(x => x.CategoryID == id);
         }
 
         public List<Category> GetList()
