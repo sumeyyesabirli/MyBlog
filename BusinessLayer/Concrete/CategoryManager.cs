@@ -25,7 +25,7 @@ namespace BusinessLayer.Concrete
             _categoryDal.Delete(category);
         }
 
-        public void CaregoryAdd(Category category)
+        public void CategoryAdd(Category category)
         {
             _categoryDal.Add(category);
 
@@ -41,5 +41,9 @@ namespace BusinessLayer.Concrete
             return _categoryDal.List();
         }
 
+        public void CategoryUpdate(Category category)
+        {
+            _categoryDal.Update(category);
+        }
     }
 }

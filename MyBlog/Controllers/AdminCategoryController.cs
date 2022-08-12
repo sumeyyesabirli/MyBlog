@@ -32,7 +32,7 @@ namespace MyBlog.Controllers
             ValidationResult result = categoryvalidator.Validate(category);
             if (result.IsValid)
             {
-                cm.CaregoryAdd(category);
+                cm.CategoryAdd(category);
                 return RedirectToAction("Index");
             }
             else
@@ -49,6 +49,18 @@ namespace MyBlog.Controllers
         {
             var categoryvalue = cm.GetByID(id);
             cm.CategoryDelete(categoryvalue);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult EditCategory(int id)
+        {
+            var categoryvalue = cm.GetByID(id);
+            return View(categoryvalue);
+        } 
+        [HttpPost]
+        public ActionResult EditCategory(Category category)
+        {
+            cm.CategoryUpdate(category);
             return RedirectToAction("Index");
         }
     }

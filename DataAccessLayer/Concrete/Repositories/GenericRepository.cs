@@ -19,13 +19,15 @@ namespace DataAccessLayer.Concrete.Repositories
         }
         public void Add(Entity entity)
         {
-            _object.Add(entity);
+            var addEntity = context.Entry(entity);
+            addEntity.State= EntityState.Added;
             context.SaveChanges();
         }
 
         public void Delete(Entity entity)
         {
-            _object.Remove(entity);
+            var deleteEntity = context.Entry(entity);
+            deleteEntity.State = EntityState.Deleted;
             context.SaveChanges();
 
         }
@@ -47,7 +49,9 @@ namespace DataAccessLayer.Concrete.Repositories
 
         public void Update(Entity entity)
         {
-           context.SaveChanges();
+            var updateEntity = context.Entry(entity);
+            updateEntity.State = EntityState.Modified;
+            context.SaveChanges();
         }
     }
 }

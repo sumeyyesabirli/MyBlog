@@ -21,7 +21,7 @@ namespace MyBlog.Controllers
             ValidationResult result = validatior.Validate(category);
             if (result.IsValid)
             {
-                cm.CaregoryAdd(category);
+                cm.CategoryAdd(category);
                 return RedirectToAction("GetCategoryList");
             }
             else
