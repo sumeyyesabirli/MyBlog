@@ -18,12 +18,12 @@ namespace BusinessLayer.Concrete
             _writerDal = writerDal;
         }
 
-        public void CategoryDelete(Writer writer)
+        public void WriterDelete(Writer writer)
         {
             _writerDal.Delete(writer);
         }
 
-        public void CategoryUpdate(Writer writer)
+        public void WriterUpdate(Writer writer)
         {
             _writerDal.Update(writer);
         }
@@ -38,7 +38,7 @@ namespace BusinessLayer.Concrete
            return _writerDal.List();
         }
 
-        public void WriteryAdd(Writer writer)
+        public void WriterAdd(Writer writer)
         {
            _writerDal.Add(writer);
         }
