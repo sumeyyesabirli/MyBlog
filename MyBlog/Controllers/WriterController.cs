@@ -10,6 +10,7 @@ namespace MyBlog.Controllers
     public class WriterController : Controller
     {
         WriterManager wm = new WriterManager(new EfWriterDal());
+        WriterValidatior writerValidatior = new WriterValidatior();
         public ActionResult Index()
         {
             var WriterValues = wm.GetList();
@@ -22,8 +23,7 @@ namespace MyBlog.Controllers
         }
        [HttpPost]
         public ActionResult AddWriter(Writer writer)
-        {
-            WriterValidatior writerValidatior = new WriterValidatior();
+        {            
             ValidationResult  result= writerValidatior.Validate(writer);
             if (result.IsValid)
             {
@@ -49,8 +49,22 @@ namespace MyBlog.Controllers
         [HttpPost]
         public ActionResult EditWriter(Writer writer)
         {
-            wm.WriterUpdate(writer);
-            return RedirectToAction("Index");
+            ValidationResult result = writerValidatior.Validate(writer);
+            if (result.IsValid)
+            {
+                wm.WriterUpdate(writer);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach (var item in result.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
+
+    
         }
 
     }

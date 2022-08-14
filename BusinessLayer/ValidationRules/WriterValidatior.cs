@@ -18,6 +18,7 @@ namespace BusinessLayer.ValidationRules
            // RuleFor(x => x.WriterAbout).Must(x => x != null && x.ToUpper().Contains("A")).WithMessage("Hakkında kısmında en az bir a harfi içermelidir");
             RuleFor(x => x.WriterSurName).MinimumLength(2).WithMessage("Lütfen En Az 2 Karakter Değer Giriniz");
             RuleFor(x => x.WriterSurName).MaximumLength(50).WithMessage("Lütfen 50 Karakter Fazla Değer Girişi Yapmayınız");
+            RuleFor(x => x.WriterTitle).NotEmpty().WithMessage("Ünvan Kısmını Boş Bırakmayınız");
         }
     }
 }
