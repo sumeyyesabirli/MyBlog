@@ -20,7 +20,7 @@ namespace DataAccessLayer.Concrete.Repositories
         public void Add(Entity entity)
         {
             var addEntity = context.Entry(entity);
-            addEntity.State= EntityState.Added;
+            addEntity.State = EntityState.Added;
             context.SaveChanges();
         }
 

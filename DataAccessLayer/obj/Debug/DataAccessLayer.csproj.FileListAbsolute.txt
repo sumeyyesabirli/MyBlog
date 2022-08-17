@@ -16,3 +16,5 @@ C:\Yeni klasör\MyBlog\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
 C:\Yeni klasör\MyBlog\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_1.resources
 C:\Yeni klasör\MyBlog\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
 C:\Yeni klasör\MyBlog\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_2.resources
+C:\Yeni klasör\MyBlog\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_3.resources
+C:\Yeni klasör\MyBlog\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_4.resources
