@@ -23,9 +23,8 @@ namespace MyBlog.Controllers
         public ActionResult AddHeading()
         {
             List<SelectListItem> valuecategory = (from x in cm.GetList() select new SelectListItem { Text = x.CategoryName, Value = x.CategoryID.ToString()}).ToList();
-            
-            List<SelectListItem> valuewriter=(from x in wm.GetList() select new SelectListItem { Text = x.WriterName,Value=x.WriterID.ToString()}).ToList();
             ViewBag.vlc = valuecategory;
+            List<SelectListItem> valuewriter=(from x in wm.GetList() select new SelectListItem { Text = x.WriterName,Value=x.WriterID.ToString()}).ToList();
             ViewBag.vlw=valuewriter;
            
             return View();
@@ -38,8 +37,21 @@ namespace MyBlog.Controllers
             hm.HeadingAdd(heading);
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult EditHeading(int id)
+        {
+            List<SelectListItem> valuecategory = (from x in cm.GetList() select new SelectListItem { Text = x.CategoryName, Value = x.CategoryID.ToString() }).ToList();
+            ViewBag.vlc = valuecategory;
+            var Headingvalue = hm.GetByID(id);
+            return View(Headingvalue);
+        }
+        [HttpPost]
+        public ActionResult EditHeading(Heading heading)
+        {
+            hm.HeadingUpdate(heading);
+            return RedirectToAction("Index");
+        }
 
-       
 
     }
 }
