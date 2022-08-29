@@ -1,10 +1,29 @@
-﻿
+﻿@using EntityLayer.Concrete
+@model List<About>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Hakkında Veri Listesi</h2>
+<table class=" table table-border">
+    <tr>
+        <th>ID</th>
+        <th>Hakkımda Başlığı</th>
+        <th>Aktif</th>
+        <th>Pasif</th>
+    </tr>
+    @foreach(var item in Model)
+     {
+        <tr>
+            <td>@item.AboutID</td>
+            <td>Başlık</td>
+            <td><a href="#" class="btn btn-warning">Aktif</a></td>
+            <td><a href="#" class="btn btn-danger">Pasif</a></td>
+        </tr>
+
+     }
+</table>
 
 <button class="btn btn-primary" data-toggle="modal" data-target="#Modal1">
     Hakkımızda
@@ -16,19 +35,19 @@
             <div class="modal-header">
                 <h2 class="modal-title">Hakkımızda Metin Girişi</h2>
             </div>
-            <form method="post" action="#">
+            <form method="post" action="/About/AddAbout">
                 <div class="modal-body">
                     <label> Hakkımızda Metin1 </label>
-                    <input type="text" name="#" class="form-control" />
+                    <input type="text" name="AboutDetails1" class="form-control" />
                     <br />
                     <label> Hakkımızda Metin2 </label>
-                    <input type="text" name="#" class="form-control" />
+                    <input type="text" name="AboutDetails2" class="form-control" />
                     <br />
                     <label> Hakkımızda Görsel2</label>
-                    <input type="text" name="#" class="form-control" />
+                    <input type="text" name="AboutImage1" class="form-control" />
                     <br />
                     <label> Hakkımızda Metin </label>
-                    <input type="text" name="#" class="form-control" />
+                    <input type="text" name="AboutImage2" class="form-control" />
                     <br />
                     <button class="btn btn-info">Kaydet</button>
                 </div>

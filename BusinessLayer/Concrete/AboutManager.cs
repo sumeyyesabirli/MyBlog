@@ -11,6 +11,7 @@ namespace BusinessLayer.Concrete
     {
         IAboutDal _aboutDal;
 
+
         public AboutManager(IAboutDal aboutDal)
         {
             _aboutDal = aboutDal;
@@ -26,7 +27,7 @@ namespace BusinessLayer.Concrete
             _aboutDal.Update(about);
         }
 
-        public void CategoryAdd(About about)
+        public void AboutAdd(About about)
         {
            _aboutDal.Add(about);
         }
