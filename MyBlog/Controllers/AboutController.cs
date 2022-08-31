@@ -1,4 +1,4 @@
-﻿using BusinessLayer.Concrete;
+﻿ using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
@@ -29,6 +29,10 @@ namespace MyBlog.Controllers
         {
             abm.AboutAdd(about);
             return RedirectToAction("Index");
+        }
+        public PartialViewResult AboutPartial()
+        {
+            return PartialView();
         }
     }
 }
