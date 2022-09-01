@@ -19,10 +19,22 @@ namespace MyBlog.Controllers
             var contactvalues = cm.GetList();
             return View(contactvalues);
         }
-        public ActionResult GetContactDetails(int id )
+        [HttpGet]
+        public ActionResult GetContactDetails(int id)
         {
-            var contactvalues= cm.GetByID(id);
+
+            var contactvalues = cm.GetByID(id);
             return View(contactvalues);
+
         }
+        [HttpPost]
+        public ActionResult GetContactDetails()
+        {
+
+            return RedirectToAction("Index");
+
+        }
+
+
     }
 }
