@@ -19,21 +19,21 @@ namespace MyBlog.Controllers
             var contactvalues = cm.GetList();
             return View(contactvalues);
         }
-        [HttpGet]
-        public ActionResult GetContactDetails(int id)
+        public ActionResult GetContactDetails(int? id)
         {
-
-            var contactvalues = cm.GetByID(id);
+            if (!id.HasValue)
+            {
+                return RedirectToAction("Index");
+            }
+            var contactvalues = cm.GetByID(id.Value);
             return View(contactvalues);
-
         }
-        [HttpPost]
-        public ActionResult GetContactDetails()
+        
+        public PartialViewResult MessageListMenu()
         {
-
-            return RedirectToAction("Index");
-
+            return PartialView();
         }
+
 
 
     }

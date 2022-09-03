@@ -20,3 +20,4 @@ C:\Yeni klasör\MyBlog\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_
 C:\Yeni klasör\MyBlog\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_4.resources
 C:\Yeni klasör\MyBlog\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_5.resources
 C:\Yeni klasör\MyBlog\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_6.resources
+C:\Yeni klasör\MyBlog\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_7.resources
